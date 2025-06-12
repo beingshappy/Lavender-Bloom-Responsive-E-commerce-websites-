@@ -205,6 +205,7 @@ body {
     font-size: 15px;
     transition: 0.4s ease;
 }
+
 #hero button:hover {
     background-color: rgba(8, 129, 120, 0.5);
     box-shadow: 0 0 10px #088178, 0 0 20px #088178;
@@ -222,19 +223,38 @@ body {
     width: 180px;
     text-align: center;
     padding: 25px 15px;
-    border: 1px solid var(--neon-purple);
-    border-radius: 4px;
     margin: 15px 0;
-    background: #0a0944;
+    border-radius: 12px;
+    cursor: pointer;
+
+    /* Dual Background for neon border */
+    background: linear-gradient(#0a0944, #0a0944) padding-box,
+        linear-gradient(135deg, #00f0ff, #9b00ff) border-box;
+    border: 2px solid transparent;
+
     color: var(--text-light);
-    transition: 0.3s ease;
-    box-shadow: 0 0 5px  var(--neon-purple);
+
+    /* Neon glow shadow */
+    box-shadow:
+        0 0 8px #00eeff64,
+        0 0 15px #9900ff65,
+        0 0 25px rgba(0, 255, 255, 0.3),
+        0 0 35px rgba(155, 0, 255, 0.3);
+
+    transition: all 0.3s ease;
 }
 
+
+
 #featured .fe-box:hover {
-    box-shadow: 0 0 15px var(--neon-purple);
-    border-color: var(--neon-purple);
+    transform: scale(1.05);
+    box-shadow:
+        0 0 12px #00eeff7c,
+        0 0 25px #9900ff84,
+        0 0 35px rgba(0, 255, 255, 0.4),
+        0 0 55px rgba(155, 0, 255, 0.4);
 }
+
 
 #featured .fe-box img {
     width: 100%;
@@ -251,10 +271,11 @@ body {
     color: #f3f3f5;
     background-color: rgb(247, 198, 135);
     font-size: 13px;
-    box-shadow: 0 0 5px  var(--neon-purple);
+    box-shadow: 0 0 5px var(--neon-purple);
     cursor: pointer;
-    
+
 }
+
 #featured .fe-box:nth-child(1) h6 {
     background-color: var(--gradient-primary);
 }
@@ -288,19 +309,29 @@ body {
     width: 23%;
     min-width: 250px;
     padding: 10px 12px;
-    border: 1px solid #333;
-    border-radius: 25px;
-    cursor: pointer;
-    box-shadow: 0 0 5px  var(--neon-purple);
     margin: 15px 0;
-    transition: 0.3s ease;
+    border-radius: 20px;
+    cursor: pointer;
     position: relative;
+    transition: 0.3s ease;
     background: #0a0944;
+
+    /* Glowing Gradient Border Effect */
+    border: 2px solid transparent;
+    background: linear-gradient(#0a0944, #0a0944) padding-box,
+        linear-gradient(135deg, #00f0ff, #ff00cc) border-box;
+
+    box-shadow:
+        0 0 8px #00eeff7f,
+        0 0 15px #ff00cc7d;
 }
+
 
 #product1 .pro:hover {
     box-shadow: 0 0 15px var(--neon-cyan);
     border-color: var(--neon-cyan);
+    transform: scale(1.05);
+
 }
 
 #product1 .pro img {
@@ -352,6 +383,7 @@ body {
     right: 10px;
     transition: 0.3s ease;
 }
+
 #product1 .pro .cart:hover {
     background-color: var(--neon-cyan);
     color: #000;
@@ -390,7 +422,7 @@ body {
     color: white;
     font-size: 30px;
     padding: 10px 0;
-    
+
 }
 
 #banner h2 span {
@@ -406,7 +438,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+
     /* gap: 20px; */
 }
 
@@ -427,6 +459,7 @@ body {
 #sm-banner .banner-box2 {
     background-image: url('Banner/b10.jpg');
 }
+
 #sm-banner .banner-box:hover button {
     background: var(--mint-green);
     color: #000;
@@ -444,7 +477,7 @@ body {
     font-size: 30px;
     font-weight: 800;
     text-shadow: none;
-    
+
 }
 
 #sm-banner span {
@@ -581,7 +614,7 @@ footer .col {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 20px;
-    
+
 }
 
 footer .logo {
@@ -852,7 +885,8 @@ footer .copyright {
 }
 
 /* contact part */
-.fa-regular, .far {
+.fa-regular,
+.far {
     font-weight: 400;
     font-size: 25px;
     color: red;
@@ -965,6 +999,8 @@ footer .copyright {
     height: 65px;
     object-fit: cover;
     margin-right: 15px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(30, 145, 203);
 }
 
 #form-details .people div p {
@@ -978,106 +1014,124 @@ footer .copyright {
     display: block;
     font-size: 16px;
     font-weight: 600;
-    color: #000;
+    color: #ffffff;
 }
 
 
 /* cart part  */
-#cart{
+#cart {
     overflow-x: auto;
     color: white;
 }
 
-#cart table{
+#cart table {
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
     white-space: nowrap;
 }
-#cart table img{
+
+#cart table img {
     width: 70px;
 }
-#cart table td:nth-child(1){
+
+#cart table td:nth-child(1) {
     width: 100px;
     text-align: center;
 }
-#cart table td:nth-child(2){
+
+#cart table td:nth-child(2) {
     width: 150px;
     text-align: center;
 }
-#cart table td:nth-child(3){
+
+#cart table td:nth-child(3) {
     width: 250px;
     text-align: center;
 }
+
 #cart table td:nth-child(4),
 #cart table td:nth-child(5),
-#cart table td:nth-child(6){
+#cart table td:nth-child(6) {
     width: 150px;
     text-align: center;
 }
-#cart table td:nth-child(5) input{
+
+#cart table td:nth-child(5) input {
     width: 70px;
     padding: 10px 5px 10px 15px;
 }
-#cart table thead{
+
+#cart table thead {
     border: 1px solid #e2e9e1;
     border-left: none;
     border-right: none;
 }
-#cart table thead td{
+
+#cart table thead td {
     font-weight: 700;
     text-transform: uppercase;
     font-size: 13px;
     padding: 18px 0;
 }
-#cart table tbody tr td{
+
+#cart table tbody tr td {
     padding-top: 15px;
 }
-#cart table tbody td{
+
+#cart table tbody td {
     font-size: 13px;
 }
+
 #cart-add {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
 }
-#coupon{
+
+#coupon {
     width: 50%;
     margin-bottom: 30px;
-    
+
 
 }
+
 #coupon h3,
-#subtotal h3{
+#subtotal h3 {
     padding-bottom: 15px;
     color: white;
 }
-#coupon input{
+
+#coupon input {
     padding: 10px 20px;
     outline: nome;
     width: 60%;
     margin-right: 10px;
     border: 1px solid #e2e9e1;
 }
+
 #coupon button,
-#subtotal button{
+#subtotal button {
     background-color: #088178;
     color: #fff;
     padding: 12px 20px;
 }
-#subtotal{
+
+#subtotal {
     width: 50%;
     margin-bottom: 30px;
     border: 1px solid #e2e9e1;
     padding: 30px;
 }
-#subtotal table{
+
+#subtotal table {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 20px;
 }
-#subtotal table td{
+
+#subtotal table td {
     width: 50%;
     border: 1px solid #e2e9e1;
     padding: 10px;
@@ -1125,6 +1179,7 @@ footer .copyright {
         font-size: 24px;
         padding-left: 20px;
     }
+
 
     #close {
         display: initial;
@@ -1186,7 +1241,7 @@ footer .copyright {
 
 @media (max-width: 477px) {
     .section-p1 {
-        padding: 20px;
+        padding: 40px;
     }
 
     #header {
@@ -1232,7 +1287,7 @@ footer .copyright {
     }
 }
 
-@media(max-width: 470px) {
+@media(max-width: 468px) {
     #hero {
         background-position: 80%;
     }
@@ -1240,6 +1295,24 @@ footer .copyright {
     #featured .fe-box {
         width: 110px;
     }
+
+    #product1 .pro-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        padding: 8px;
+    }
+
+    #product1 .pro {
+        width: 47%;
+        min-width: unset;
+        /* <-- Add this line */
+        margin: 0;
+        box-sizing: border-box;
+
+    }
+
 
     #banner h2 {
         font-size: 25px;
@@ -1363,9 +1436,69 @@ footer .copyright {
         width: 100%;
         margin-bottom: 30px;
     }
+
+    #form-details .people div {
+        flex: 0 0 100%;
+    }
+
+    #cart-add {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    #coupon,
+    #subtotal {
+        width: 90%;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+
+    #coupon div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    #coupon input[type="text"] {
+        width: 100%;
+        padding: 0.6rem;
+        font-size: 1rem;
+    }
+
+    #coupon button.normal,
+    #subtotal button.normal {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        background: #088178;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+    }
+
+    #subtotal table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    #subtotal table td {
+        padding: 0.5rem 0;
+    }
+
 }
+
+
 @keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
