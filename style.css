@@ -1300,7 +1300,7 @@ footer .copyright {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 16px;
+        gap: 15px;
         padding: 8px;
     }
 
